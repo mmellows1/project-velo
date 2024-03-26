@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 jQuery(document).ready(function ($) {
-  console.log("loaded");
+  console.log('loaded');
   $('.slick-slider-container').slick({
     infinite: true,
     slidesToShow: 4,
@@ -47,13 +47,24 @@ jQuery(document).ready(function ($) {
   });
   $('.slick-slider-container-main').slick({
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 4,
     // Adjust the number of slides displayed at once
     slidesToScroll: 1,
-    autoplay: false,
+    centerMode: false,
+    centerPadding: '60px',
+    autoplay: true,
     // Enable autoplay if you want it to automatically slide
-    autoplaySpeed: 3000 // Set the autoplay speed in milliseconds
+    autoplaySpeed: 3000,
+    // Set the autoplay speed in milliseconds
     // Add other options as needed
+    responsive: [{
+      breakpoint: 768,
+      // break for medium screens
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }]
   });
 });
 
