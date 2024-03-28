@@ -134,3 +134,8 @@ function velo_enqueue_styles()
     wp_enqueue_style( 'velo-style', get_stylesheet_directory_uri() . '/assets/dist/bundle.css' );
 }
 add_action( 'wp_enqueue_scripts', 'velo_enqueue_styles' );
+
+/**
+ * ACF Fields
+ */
+require "acf/carousel.php";
